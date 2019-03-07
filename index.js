@@ -1,8 +1,8 @@
 
-import { createLogAgent } from './lib/logAgent';
-import { createSimpleClient } from './lib/simpleClient';
+import { createLogAgentAdapter } from './lib/logAgentAdapter';
+import { createAdvancedClient } from './lib/advancedClient';
 
-const logAgent = createLogAgent();
-const node = createSimpleClient({ logAgent });
+const logAgent = createLogAgentAdapter();
+const client = createAdvancedClient({ logAgent });
 
-node.startLogging();
+client.startLogging();
